@@ -20,3 +20,10 @@ gunicorn:
     - managed
     - source: salt://gunicorn/webapp.conf
 
+/etc/lumiserv/restart-webapp.sh: 
+  file:
+    - managed
+    - source: salt://gunicorn/restart-webapp.sh
+    - user: root
+    - group: root
+    - mode: 744
