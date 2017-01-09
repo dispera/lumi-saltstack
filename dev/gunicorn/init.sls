@@ -22,4 +22,4 @@ gunicorn:
 
 restart-webapp:
   cmd.run:
-    name: 'stop webapp && start webapp'
+    - name: 'stop webapp && start webapp'
