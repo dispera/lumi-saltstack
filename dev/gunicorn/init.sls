@@ -19,7 +19,3 @@ gunicorn:
   file:
     - managed
     - source: salt://gunicorn/webapp.conf
-
-restart-webapp:
-  cmd.run:
-    - name: 'stop webapp && start webapp'
