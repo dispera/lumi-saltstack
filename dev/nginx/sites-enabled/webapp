@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name webapp.lumiserv.com;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/etc/lumiserv/webapp.sock;
+    }
+}
